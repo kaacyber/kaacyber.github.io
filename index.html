@@ -850,9 +850,18 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous">
+  $('.page-scroll').on('click', function(e) {
+
+ var tujuan = $(this).attr('href');
+
+ var elemenTujuan = $(tujuan);
+
+ $('html , body').animate({
+  scrollTop: elemenTujuan.offset().top - 50
+ });
+
+ e.preventDefault();
+});
 </script>
   </body>
 </html>
